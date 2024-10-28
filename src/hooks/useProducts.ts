@@ -1,4 +1,4 @@
-import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const fetchProducts = async (searchTerm: string, categoryUrl?: string) => {
@@ -17,7 +17,7 @@ const fetchCategories = async () => {
 };
 
 export const useProducts = (searchTerm: string, categoryUrl?: string) => {
-  const { data: products , isLoading} = useQuery({
+  const { data: products, isLoading } = useQuery({
     queryKey: ["products", searchTerm, categoryUrl],
     queryFn: () => fetchProducts(searchTerm, categoryUrl),
   });
@@ -25,7 +25,7 @@ export const useProducts = (searchTerm: string, categoryUrl?: string) => {
   const { data: categories } = useQuery({
     queryKey: ["categories"],
     queryFn: fetchCategories,
-  });   
+  });
 
   return { products, categories, isLoading };
 };
