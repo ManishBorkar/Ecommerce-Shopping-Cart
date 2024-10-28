@@ -2,6 +2,9 @@
 
 A simple e-commerce shopping cart application featuring a searchable product list, category-based filtering, and a cart page with persistent state.
 
+## Demo link
+https://ecommerce-shopping-cart-fawn.vercel.app/
+
 ## Features
 - **User Authentication** with Auth0
 - **Product Listings** with search, filter, and sorting
