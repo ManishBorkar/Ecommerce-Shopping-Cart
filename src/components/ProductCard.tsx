@@ -1,4 +1,5 @@
 import useCartStore from "../store/cartStore";
+import ImageLoader from "./ImageLoader";
 
 type ProductProps = {
   product: {
@@ -61,7 +62,7 @@ const ProductCard = ({ product, isAuthenticated, handleUnauthorizedAction }: Pro
   return (
     <div className="bg-white border border-gray-400 rounded-lg p-4 flex flex-col justify-between transition-transform duration-200 hover:shadow-lg">
       <div className="h-40 overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-contain" />
+        <ImageLoader src={image} alt={title} className="w-full h-full object-contain" />
       </div>
       <div className="mt-3 text-ellipsis overflow-hidden h-10">
         <h3 className="text-lg font-semibold leading-tight">

@@ -65,7 +65,7 @@ const ProductList = () => {
         </select>
       </div>
       {isLoading ? (
-        <LoadingSpinner />
+        <LoadingSpinner label="Loading products..." />
       ) : products?.length === 0 ? (
         <p className="text-gray-500 font-semibold sm:text-lg">No products found</p>
       ) : (
