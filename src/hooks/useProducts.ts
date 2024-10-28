@@ -20,7 +20,6 @@ export const useProducts = (searchTerm: string, categoryUrl?: string) => {
   const { data: products , isLoading} = useQuery({
     queryKey: ["products", searchTerm, categoryUrl],
     queryFn: () => fetchProducts(searchTerm, categoryUrl),
-    placeholderData: keepPreviousData,
   });
 
   const { data: categories } = useQuery({
